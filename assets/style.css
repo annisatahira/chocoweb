@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap");
+
+body {
+  font-family: "Baloo Bhaina 2", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-family: "Pacifico", cursive;
+  color: saddlebrown;
+}
+
+h1,
+h3 {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 20px; /* change this to whatever height you want it */
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.first {
+  margin: auto;
+  width: 25%;
+}
+
+.double {
+  margin-left: 50px;
+  margin-top: 5px;
+  width: 75%;
+}
+
+/* Styling for header */
+
+header {
+  display: inline;
+  padding-bottom: 0;
+  margin: 0;
+  /* remove gap between beacuse inline */
+  font-size: 0;
+}
+
+nav {
+  background-color: transparent;
+  padding: 20px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  transition: 0.4s;
+}
+
+nav a {
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+
+#menu {
+  display: none;
+}
+
+nav a:hover,
+aside a:hover {
+  font-weight: bold;
+  color: saddlebrown;
+}
+
+nav li {
+  display: inline;
+  margin-left: 20px;
+  list-style-type: none;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  max-height: 620px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.text-banner {
+  top: 35%;
+  left: 55px;
+  position: absolute;
+  text-align: left;
+  color: white;
+}
+
+.text-banner h1 {
+  font-size: 35px;
+}
+
+.text-banner p {
+  text-align: left;
+  line-height: 0.7;
+  font-size: 20px;
+}
+
+.text-banner span {
+  color: white;
+}
+
+.slide {
+  display: none;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Styling For Main */
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  overflow: auto;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* Reason Section */
+#reason {
+  background-color: rgb(77, 63, 63);
+  padding: 10px 120px;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#reason img {
+  height: 70px;
+}
+
+#reason h1 > span {
+  color: white;
+}
+
+#reason .card {
+  background-color: rgb(243, 243, 243);
+  color: black;
+}
+
+#reason .card:not(:first-child) {
+  margin-left: 25px;
+}
+
+#content {
+  width: 100%;
+  text-align: justify;
+}
+
+#content h2 {
+  color: saddlebrown;
+}
+
+/* About Section */
+#about {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 90px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+#about h2 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+hr {
+  width: 20%;
+  height: 3px;
+  border-width: 0;
+  color: brown;
+  background-color: brown;
+  margin-bottom: 25px;
+  border-style: dashed;
+}
+
+.hr-dashed hr {
+  border: 1px dashed rgb(247, 208, 180);
+  width: 20%;
+}
+
+#about h1 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Benefit Styling */
+#benefits {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 60px;
+  background-color: rgb(214, 214, 214);
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  border-radius: 8px;
+  padding: 20px;
+  width: 400px;
+}
+
+.box-black {
+  background-color: rgb(82, 68, 68);
+  color: rgb(255, 255, 255);
+}
+
+.box-grey {
+  background-color: rgb(253, 252, 252);
+  color: black;
+}
+
+#benefits .box:not(:first-child) {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+/* Variant Styling */
+#variant {
+  padding: 20px 100px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#variant .card {
+  border-top-style: groove;
+  border-color: saddlebrown;
+}
+
+#variant img {
+  width: 100px;
+}
+
+/* Product Styling */
+#products {
+  background-color: rgb(248, 248, 248);
+  padding: 20px;
+  line-height: 0.7;
+  color: black;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#products figure {
+  text-align: center;
+}
+
+#products img {
+  width: 100px;
+}
+
+#products li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* Summary Styling */
+#summary {
+  float: left;
+  width: 75%;
+}
+
+#summary .card {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  border-top: 1px solid #ddd;
+}
+
+.container {
+  padding: 20px;
+}
+
+.container hr {
+  width: 100%;
+}
+/* Profile Styling */
+
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+aside a {
+  text-decoration: none;
+  color: black;
+}
+
+aside li {
+  list-style-type: square;
+}
+
+.dev h2,
+figure {
+  text-align: center;
+}
+
+.dev img {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile-bio {
+  text-align: left;
+  font-size: 15px;
+  line-height: 0.7;
+}
+
+.profile-bio h3 {
+  padding-top: 10px;
+  text-align: left;
+}
+
+footer {
+  padding: 20px;
+  color: white;
+  background-color: #353032;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FOR PHONE */
+
+@media only screen and (max-width: 789px) {
+  #summary,
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 480px;
+  }
+
+  .text-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .text-banner p {
+    line-height: 1.5;
+    font-size: 20px;
+  }
+  .text-banner em {
+    display: none;
+  }
+
+  .container {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #about img {
+    display: none;
+  }
+
+  .flex-row {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  /* ABOUT */
+
+  #about {
+    padding: 20px;
+  }
+
+  #about h2 {
+    text-align: left;
+  }
+
+  #about .double {
+    width: 100%;
+    padding: 5px;
+    margin: auto;
+  }
+
+  /* REASON */
+  #reason,
+  #variant,
+  #benefits {
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  #reason .card,
+  #variant .card {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #reason .card:not(:first-child),
+  #variant .card:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  /* BENEFIT */
+
+  #benefits .box {
+    width: 100%;
+  }
+
+  #benefits .box:not(:first-child) {
+    margin-left: -1px;
+  }
+
+  /* PRODUCT */
+  #products ul {
+    padding-left: 0;
+  }
+
+  /* Profile */
+  .dev img {
+    width: 200px;
+  }
+
+  aside .card {
+    margin-bottom: 20px;
+  }
+
+  .profile-bio h3,
+  .profile-bio p {
+    text-align: center;
+  }
+}
+
+/* Desktop or Laptop */
+
+@media only screen and (min-width: 992px) {
+  /* ABOUT */
+  #about img {
+    height: 200px;
+  }
+
+  /* REASON */
+
+  #reason .card {
+    height: 350px;
+    margin-bottom: 40px;
+  }
+
+  /* VARIANT */
+
+  #variant .card {
+    margin-bottom: 20px;
+    width: 500px;
+    height: 100%;
+  }
+
+  #variant .flex-row {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #variant .card:not(:first-child) {
+    margin-left: -1px;
+  }
+}
+
+/* EXTRA LARGE SCREEN */
+@media only screen and (min-width: 1200px) {
+  #about img {
+    height: 250px;
+  }
+
+  #reason .card {
+    width: 100%;
+    height: 300px;
+  }
+
+  #variant .flex-row {
+    flex-direction: row;
+  }
+
+  #variant .card {
+    width: 100%;
+    height: 550px;
+  }
+
+  #variant .card:not(:first-child) {
+    margin-left: 25px;
+  }
+}
+
+/* NAV */
+@media screen and (max-width: 500px) {
+  nav {
+    padding: 10px;
+    background-color: black;
+  }
+
+  nav ul {
+    padding-left: 0;
+  }
+  #menu {
+    display: block;
+    padding: 0;
+    margin-left: 0;
+    text-align: left;
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+
+  #mobile-nav li {
+    display: list-item;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+  }
+
+  #menu a:hover {
+    color: white;
+  }
+}
